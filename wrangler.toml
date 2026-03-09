@@ -1,9 +1,9 @@
-name = "narmadasales"
+name = "narmadasales30"
 compatibility_date = "2024-01-01"
 pages_build_output_dir = "./"
 
 # D1 Database binding
 [[d1_databases]]
 binding = "DB"
-database_name = "narmadasales23-db"
-database_id = "a55d78cc-e1b3-4ff7-bc82-16d9eaf8818c"
+database_name = "narmadasales2026-db"
+database_id = "ab2fd9fc-8b76-4b9f-b07a-fd0da89cf125"
