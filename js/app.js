@@ -290,3 +290,61 @@ function updateNavigation() {
     }
 
 }
+
+/* -----------------------------
+   Loading Indicator Functions
+----------------------------- */
+
+function showLoading() {
+
+    let loader = document.getElementById("globalLoader");
+
+    if (!loader) {
+
+        loader = document.createElement("div");
+        loader.id = "globalLoader";
+
+        loader.innerHTML = `
+            <div style="
+                position:fixed;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background:rgba(0,0,0,0.4);
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                z-index:9999;
+            ">
+                <div style="
+                    background:white;
+                    padding:20px 30px;
+                    border-radius:8px;
+                    font-size:18px;
+                    font-weight:500;
+                ">
+                    Loading...
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(loader);
+
+    } else {
+
+        loader.style.display = "flex";
+
+    }
+}
+
+function hideLoading() {
+
+    const loader = document.getElementById("globalLoader");
+
+    if (loader) {
+
+        loader.style.display = "none";
+
+    }
+}
