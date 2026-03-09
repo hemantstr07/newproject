@@ -348,3 +348,25 @@ function hideLoading() {
 
     }
 }
+
+function showToast(message, type="success") {
+
+    const toast = document.createElement("div");
+
+    toast.innerText = message;
+
+    toast.style.position = "fixed";
+    toast.style.bottom = "20px";
+    toast.style.right = "20px";
+    toast.style.padding = "12px 20px";
+    toast.style.background = type === "error" ? "#e74c3c" : "#2ecc71";
+    toast.style.color = "#fff";
+    toast.style.borderRadius = "6px";
+    toast.style.zIndex = "9999";
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+}
